@@ -4,6 +4,10 @@ import paddle.nn.functional as F
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import time
+
+start = time.time()
+print("start from: {}".format(start))
 
 paddle.vision.set_image_backend("cv2")
 
@@ -83,3 +87,6 @@ def train(model):
 train(model)
 
 paddle.save(model.state_dict(), "./mnist.pdparams")
+
+end = time.time()
+print("train spend: {}".format(end - start))
