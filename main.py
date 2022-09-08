@@ -82,4 +82,4 @@ def train(model):
 
 train(model)
 
-paddle.save(model.state_dict(), "foo.txt")
+paddle.save(model.state_dict(), "./mnist.pdparams")
